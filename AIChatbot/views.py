@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from google import genai
 
-client = genai.Client(api_key = 'AIzaSyAJ8nwGpP1WPl8CAuZPTwSSzQtc3KZti9w')
+client = genai.Client(api_key = 'your-api-key-here')
 
 # Create your views here.
 def index(request):
@@ -22,6 +22,7 @@ def response(request):
 
         return JsonResponse({'response' : ans})
     return JsonResponse({ 'response' : 'Invalid request'}, status = 400)
+
 
 
 
